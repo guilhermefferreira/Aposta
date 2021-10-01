@@ -10,21 +10,22 @@ public class Cliente {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "idcliente")
-    private int IdTecido;
+    private int IdCliente;
 
     @Column(name = "nome", nullable = false, length = 50)
     @Pattern(regexp = "[A-z ]{5,50}")
     private String Nome;
 
-    @Column(name = "email",precision = 12, scale = 2)
-    private double Email;
+    @Column(name = "email", nullable = false, length = 50)
+    @Pattern(regexp = "[A-z ]{5,50}")
+    private String Email;
 
-    public int getIdTecido() {
-        return IdTecido;
+    public int getIdCliente() {
+        return IdCliente;
     }
 
-    public void setIdTecido(int idTecido) {
-        IdTecido = idTecido;
+    public void setIdCliente(int idCliente) {
+        IdCliente = idCliente;
     }
 
     public String getNome() {
@@ -35,11 +36,11 @@ public class Cliente {
         Nome = nome;
     }
 
-    public double getEmail() {
+    public String getEmail() {
         return Email;
     }
 
-    public void setEmail(double email) {
+    public void setEmail(String email) {
         Email = email;
     }
 }
