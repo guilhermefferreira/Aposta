@@ -15,12 +15,10 @@ public class ResultadoBiz {
 
     private JogoRepository jogoRepository;
 
-    private ClubeRepository clubeRepository;
 
     public ResultadoBiz(JogoRepository jogoRepository, ClubeRepository clubeRepository){
         msg = new Mensagem();
         this.jogoRepository = jogoRepository;
-        this.clubeRepository = clubeRepository;
     }
 
     public boolean Validade(@Valid Resultado resultado){
