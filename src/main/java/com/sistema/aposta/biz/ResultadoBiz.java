@@ -16,7 +16,7 @@ public class ResultadoBiz {
     private JogoRepository jogoRepository;
 
 
-    public ResultadoBiz(JogoRepository jogoRepository, ClubeRepository clubeRepository){
+    public ResultadoBiz(JogoRepository jogoRepository){
         msg = new Mensagem();
         this.jogoRepository = jogoRepository;
     }
