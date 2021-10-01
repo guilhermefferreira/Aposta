@@ -4,6 +4,7 @@ import com.sistema.aposta.Mensagem;
 import com.sistema.aposta.biz.ClubeBiz;
 import com.sistema.aposta.entities.Clube;
 import com.sistema.aposta.repositories.ClubeRepository;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.ConstraintViolationException;
@@ -14,6 +15,7 @@ import java.util.List;
 @CrossOrigin
 public class ClubeController {
 
+    @Autowired
     private ClubeRepository clubeRepository;
 
     @GetMapping
