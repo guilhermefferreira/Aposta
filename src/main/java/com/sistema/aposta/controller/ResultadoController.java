@@ -1,6 +1,6 @@
 package com.sistema.aposta.controller;
 
-import com.sistema.aposta.Mensagem;;
+import com.sistema.aposta.Mensagem;
 import com.sistema.aposta.biz.ResultadoBiz;
 import com.sistema.aposta.entities.Resultado;
 import com.sistema.aposta.repositories.JogoRepository;
@@ -11,6 +11,10 @@ import org.springframework.web.bind.annotation.*;
 import javax.validation.ConstraintViolationException;
 import java.util.List;
 
+
+@RestController
+@CrossOrigin
+@RequestMapping("resultado")
 public class ResultadoController {
 
     @Autowired
