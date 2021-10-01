@@ -3,6 +3,7 @@ package com.sistema.aposta.entities;
 import javax.persistence.*;
 import javax.validation.constraints.Pattern;
 
+@Entity
 @Table(name = "Resultado")
 public class Resultado {
 

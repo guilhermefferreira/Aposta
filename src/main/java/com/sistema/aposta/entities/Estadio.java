@@ -1,11 +1,9 @@
 package com.sistema.aposta.entities;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import javax.validation.constraints.Pattern;
-
+@Entity
+@Table(name="estadio")
 public class Estadio {
 	
 	@Id

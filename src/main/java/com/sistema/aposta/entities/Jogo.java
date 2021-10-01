@@ -2,6 +2,7 @@ package com.sistema.aposta.entities;
 
 import javax.persistence.*;
 
+@Entity
 @Table(name = "Jogo")
 public class Jogo {
 	
