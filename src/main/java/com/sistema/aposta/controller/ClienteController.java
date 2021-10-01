@@ -11,7 +11,7 @@ import javax.validation.ConstraintViolationException;
 import java.util.List;
 
 @RestController
-@RequestMapping
+@RequestMapping("cliente")
 @CrossOrigin
 
 public class ClienteController {
