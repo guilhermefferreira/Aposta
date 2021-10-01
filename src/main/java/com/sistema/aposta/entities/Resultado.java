@@ -18,10 +18,10 @@ public class Resultado {
     @Column(name ="Vencedor")
     private boolean Vencedor;
 
-    @Column(name = "IdJogo")
+    @Column(name = "Idjogo")
     private Integer IdJogo;
 
-    @Column(name="IdClube")
+    @Column(name="Idclube")
     private Integer IdClube;
 
     public Integer getIdResultado() {
