@@ -13,7 +13,23 @@ public class Estadio {
     @Column(name = "idestadio")
     private int idEstadio;
 
-    @Column(name = "nome")
+    public int getIdEstadio() {
+		return idEstadio;
+	}
+
+	public void setIdEstadio(int idEstadio) {
+		this.idEstadio = idEstadio;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	@Column(name = "nome")
     @Pattern(regexp = "[A-z ]{5,50}")
     private String nome;
 
