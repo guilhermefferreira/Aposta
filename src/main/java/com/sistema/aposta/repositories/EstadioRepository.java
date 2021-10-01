@@ -5,10 +5,13 @@ import org.springframework.stereotype.Repository;
 
 import com.sistema.aposta.entities.Estadio;
 
-public class EstadioRespository {
+public interface EstadioRepository {
+	
 	@Repository
-	public interface EstadioRepository extends JpaRepository<Estadio,Integer> {
+	public interface estadioRepository extends JpaRepository<Estadio,Integer> {
 	}
 
-
+		
+		
 }
+		
