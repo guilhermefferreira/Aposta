@@ -56,6 +56,14 @@ public class JogoController {
         return jogoRepository.findById(id).get();
     }
     
+    @PostMapping
+    @RequestMapping("deletar")
+    public Jogo deletar(@RequestBody int id,Jogo jogo) {
+        this.jogoRepository.delete(jogo);
+        this.jogoRepository.flush();
+        return jogo;
+    }
+    
     public Mensagem salvar(Jogo jogo) {
         JogoBiz jogoBiz = new JogoBiz(clubeRepository, estadioRepository);
         
