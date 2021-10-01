@@ -19,19 +19,19 @@ public class Aposta {
 	@Column(name= "idaposta")
 	private int idAposta;
 	
-	@Column(name= "idcliente", nullable = false)	
+	@Column(name= "idcliente", nullable = false, precision = 11)	
 	private int idCliente;
 	
-	@Column(name= "datacompra", nullable=false)
+	@Column(name= "datacompra", nullable=false, precision = 11)
 	private Date dataCompra;
 	
-	@Column(name= "valor", nullable= false )	
+	@Column(name= "valor", nullable= false, precision = 16, scale = 2 )	
 	private Double valor;
 	
 	@Column(name="pago", nullable=false)
 	private Boolean pago;
 	
-	@Column(name="idjogo", nullable=false)
+	@Column(name="idjogo", nullable=false, precision = 11)
     private int idJogo;
 
 	public int getIdAposta() {
