@@ -11,6 +11,10 @@ public class Estadio {
     @Column(name = "idestadio")
     private int idEstadio;
 
+	@Column(name = "nome")
+	@Pattern(regexp = "[A-z ]{5,50}")
+	private String nome;
+
     public int getIdEstadio() {
 		return idEstadio;
 	}
@@ -26,9 +30,5 @@ public class Estadio {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-
-	@Column(name = "nome")
-    @Pattern(regexp = "[A-z ]{5,50}")
-    private String nome;
 
 }
