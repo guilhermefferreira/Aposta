@@ -48,15 +48,14 @@ class JogoControllerTest {
 	
 	@Test
 	void alterarTest() {
-		Jogo jogo = jogoController.Consultar(5);	
-		jogo.setIdJogo(7);
+		Jogo jogo = jogoController.Consultar(7);	
 		jogo.setNome("Bota Fogo x Flamengo");
 		jogo.setIdCasa(1);
 		jogo.setIdVisitante(1);
 		jogo.setIdEstadio(1);		
 		jogoController.alterar(jogo);		
-		Jogo jogoTest = jogoController.Consultar(5);	
-		assertThat(jogo.getIdJogo()).isEqualTo(jogoTest.getIdJogo());
+		Jogo jogoTest = jogoController.Consultar(7);	
+		assertThat(jogo.getNome()).isEqualTo(jogoTest.getNome());
 	}
 	
 	@Test
