@@ -51,9 +51,6 @@ public class ResultadoControllerTest {
         Resultado resultadoTeste = resultadoController.Consultar(1);
 
         assertThat(resultado.getIdJogo()).isEqualTo(resultadoTeste.getIdJogo());
-        assertThat(resultado.getIdClube()).isEqualTo(resultadoTeste.getIdClube());
-        assertThat(resultado.getNome()).isEqualTo(resultadoTeste.getNome());
-        assertThat(resultado.isVencedor()).isEqualTo(resultadoTeste.isVencedor());
 
     }
 
