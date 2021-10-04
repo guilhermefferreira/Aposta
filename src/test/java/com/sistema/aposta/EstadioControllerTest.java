@@ -15,6 +15,7 @@ public class EstadioControllerTest {
 	@Autowired
 	private EstadioController estadioController;
 	
+	@Autowired
 	private EstadioRepository estadioRepository;
 	
 	@Test
@@ -28,8 +29,8 @@ public class EstadioControllerTest {
 	void incluirTest() {
 		Estadio estadio = new Estadio();
 		Integer expected = (int) estadioRepository.count()+1;
-		estadio.setIdEstadio(2);
-		estadio.setNome("Andre");
+		estadio.setIdEstadio(0);
+		estadio.setNome("Andressa");
 		estadioController.incluir(estadio);
 		Integer result = (int)estadioRepository.count();
 		assertThat(result).isEqualTo(expected);
@@ -37,10 +38,10 @@ public class EstadioControllerTest {
 	
 	@Test
 	void alterarTest() {
-		Estadio estadio = estadioController.Consultar(2);
-		estadio.setNome("Jose");
+		Estadio estadio = estadioController.Consultar(1);
+		estadio.setNome("Josens");
 		estadioController.alterar(estadio);
-		Estadio estadioTest =  estadioController.Consultar(2);
+		Estadio estadioTest =  estadioController.Consultar(1);
 		
 		assertThat(estadio.getNome()).isEqualTo(estadioTest.getNome());
 	}
@@ -49,8 +50,8 @@ public class EstadioControllerTest {
 	void consultarTest() {
 		
 		Estadio estadio = new Estadio();
-		estadio.setNome("Jose");
-		Estadio estadioTest = estadioController.Consultar(2);
+		estadio.setNome("Josens");
+		Estadio estadioTest = estadioController.Consultar(1);
 		
 		assertThat(estadio.getNome()).isEqualTo(estadioTest.getNome());
 	}
