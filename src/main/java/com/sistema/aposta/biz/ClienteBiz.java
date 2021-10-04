@@ -8,11 +8,12 @@ import com.sistema.aposta.repositories.ClienteRepository;
 
 public class ClienteBiz {
 	
-public Mensagem msg;
-	
-	@Autowired
-	public ClienteRepository clienteRepositorio;
-	
+		public Mensagem msg;
+
+		public ClienteBiz(){
+			msg = new Mensagem();
+		}
+
 		public Boolean Validade(Cliente cliente) {
 	
 		Boolean result = true;
