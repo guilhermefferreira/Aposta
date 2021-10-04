@@ -6,12 +6,7 @@ import java.util.List;
 import javax.validation.ConstraintViolationException;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.sistema.aposta.Mensagem;
 import com.sistema.aposta.biz.ApostaBiz;
@@ -21,8 +16,8 @@ import com.sistema.aposta.repositories.ClienteRepository;
 import com.sistema.aposta.repositories.JogoRepository;
 
 @RestController
-@RequestMapping("Aposta")
-//@CrossOrigin("http://localhost:4200/")
+@RequestMapping("aposta")
+@CrossOrigin
 public class ApostaController {
 	
 	@Autowired
