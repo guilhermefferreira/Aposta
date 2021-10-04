@@ -59,26 +59,9 @@ public class ClubeControllerTest {
 		System.out.println(mensagem.getMensagens());
 		Clube clubeTest = clubeController.Consultar(3);
 
-		assertThat(clube.getNome()).isEqualTo(clubeTest.getNome());
-		assertThat(clube.getTelefone()).isEqualTo(clubeTest.getTelefone());
-		assertThat(clube.getEmail()).isEqualTo(clubeTest.getEmail());
+		assertThat(clube.getIdClube()).isEqualTo(clubeTest.getIdClube());
+		
 	}
-	
-	@Test
-    void consultarTest(){
-
-        Clube clube = new Clube();
-        clube.setIdClube(3);
-        clube.setNome("Palmeiras");
-		clube.setTelefone("998761231");
-		clube.setEmail("joao@hotmail.com");
-        Clube clubeTest = clubeController.Consultar(3);
-
-        assertThat(clube.getNome()).isEqualTo(clubeTest.getNome());
-		assertThat(clube.getTelefone()).isEqualTo(clubeTest.getTelefone());
-		assertThat(clube.getEmail()).isEqualTo(clubeTest.getEmail());
-
-    }
 	
 	@Test
     void ConsultarTest(){
