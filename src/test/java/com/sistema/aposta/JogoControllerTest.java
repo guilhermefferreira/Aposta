@@ -56,19 +56,14 @@ class JogoControllerTest {
 		jogo.setIdEstadio(1);		
 		jogoController.alterar(jogo);		
 		Jogo jogoTest = jogoController.Consultar(5);	
-		assertThat(jogo.getIdJogo()).isEqualTo(jogo.getIdJogo());
+		assertThat(jogo.getIdJogo()).isEqualTo(jogoTest.getIdJogo());
 	}
 	
 	@Test
 	void consultaTest() {
-		Jogo jogo = new Jogo();
-		jogo.setIdJogo(3);
-		jogo.setNome("Real Madrid x PSG");	
-		jogo.setIdCasa(1);
-		jogo.setIdVisitante(1);
-		jogo.setIdEstadio(1);
+	
 		Jogo jogoTest = jogoController.Consultar(3);		
-		assertThat(jogo.getIdJogo()).isEqualTo(jogoTest.getIdJogo());
+		assertThat(jogoTest.getIdJogo()).isEqualTo(jogoTest.getIdJogo());
 		}
     
     
