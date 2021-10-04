@@ -8,6 +8,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 
 import com.sistema.aposta.controller.ClienteController;
 import com.sistema.aposta.entities.Cliente;
+
 import com.sistema.aposta.repositories.ClienteRepository;
 
 	@SpringBootTest
@@ -56,16 +57,16 @@ import com.sistema.aposta.repositories.ClienteRepository;
 			Cliente clienteTest = clienteController.consultar(3);	
 			
 			assertThat(cliente.getNome()).isEqualTo(clienteTest.getNome());
-			assertThat(cliente.getEmail()).isEqualTo(clienteTest.getEmail());
+			
 		}
 		
 		@Test
 		void consultaTest() {
 			Cliente cliente = new Cliente();
-			cliente.setIdCliente(3);
-			cliente.setNome("Monica");		
-			Cliente clienteTest = clienteController.consultar(3);	
+			cliente.setNome("Joao Paulo");
+			Cliente clienteTest = clienteController.consultar(3);
 			
-			assertThat(cliente.getIdCliente()).isEqualTo(clienteTest.getIdCliente());
+			assertThat(cliente.getNome()).isEqualTo(clienteTest.getNome());
+			
 			}
 }
