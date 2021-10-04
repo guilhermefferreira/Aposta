@@ -44,4 +44,29 @@ import com.sistema.aposta.repositories.ClienteRepository;
 
 	        assertThat(result).isEqualTo(expected);
 	    }
+		
+		@Test
+		void alterarTest() {
+			
+			Cliente cliente = clienteController.consultar(3);
+			
+			cliente.setNome("Joao");
+			cliente.setIdCliente(3);
+			cliente.setEmail("joao@hotmail.com");
+	       	cliente.setNome("Monica");		
+			clienteController.alterar(cliente);		
+			Cliente clienteTest = clienteController.consultar(3);	
+			
+			assertThat(cliente.getNome()).isEqualTo(clienteTest.getNome());
+		}
+		
+		@Test
+		void consultaTest() {
+			Cliente cliente = new Cliente();
+			cliente.setIdCliente(3);
+			cliente.setNome("Monica");		
+			Cliente clienteTest = clienteController.consultar(3);	
+			
+			assertThat(cliente.getNome()).isEqualTo(clienteTest.getNome());
+			}
 }
