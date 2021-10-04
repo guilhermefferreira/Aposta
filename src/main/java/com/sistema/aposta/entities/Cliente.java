@@ -13,7 +13,7 @@ public class Cliente {
     private int IdCliente;
 
     @Column(name = "nome", nullable = false, length = 50)
-    @Pattern(regexp = "[A-z ]{5,50}")
+    @Pattern(regexp = "[A-z ]{1,50}")
     private String Nome;
 
     @Column(name = "email", nullable = false, length = 50)

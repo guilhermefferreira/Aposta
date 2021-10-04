@@ -28,7 +28,7 @@ import com.sistema.aposta.repositories.ClienteRepository;
 		
 		@Test
 	    void incluirTeste(){
-	        Integer expected = (int)clienteRepository.count();
+	        Integer expected = (int)clienteRepository.count()+1;
 	        System.out.println(expected);
 
 	        Cliente cliente = new Cliente();
@@ -50,14 +50,13 @@ import com.sistema.aposta.repositories.ClienteRepository;
 			
 			Cliente cliente = clienteController.consultar(3);
 			
-			cliente.setNome("Joao");
-			cliente.setIdCliente(3);
-			cliente.setEmail("joao@hotmail.com");
-	       	cliente.setNome("Monica");		
+			cliente.setNome("Joao Paulo");
+			cliente.setEmail("joao@hotmail.com.br");	
 			clienteController.alterar(cliente);		
 			Cliente clienteTest = clienteController.consultar(3);	
 			
 			assertThat(cliente.getNome()).isEqualTo(clienteTest.getNome());
+			assertThat(cliente.getEmail()).isEqualTo(clienteTest.getEmail());
 		}
 		
 		@Test
@@ -67,6 +66,6 @@ import com.sistema.aposta.repositories.ClienteRepository;
 			cliente.setNome("Monica");		
 			Cliente clienteTest = clienteController.consultar(3);	
 			
-			assertThat(cliente.getNome()).isEqualTo(clienteTest.getNome());
+			assertThat(cliente.getIdCliente()).isEqualTo(clienteTest.getIdCliente());
 			}
 }
